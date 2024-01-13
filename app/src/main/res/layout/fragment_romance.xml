@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+     <ImageView
+         android:id="@+id/imgMovie"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:src="@drawable/anime11" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:text="Date A Live Movie: Mayuri Judgment"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Deskription"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Perang(Kencan),dilanjutkan.Hari-hari damai Itsuka Shidou kembali tanpa harus menyelamatkan para Roh dari hari-hari pertempuran tanpa henti. Tapi, hari-hari damai itu terganggu oleh munculnya bola misterius yang memancarkan gelombang spiritual――serta seorang gadis misterius yang muncul di saat yang sama. Apa tujuannya mengawasi Shidou……? Misi yang dipercayakan kepada Shidou dalam situasi tegang adalah,“Berkencan dengan semua Roh, dan buat mereka jatuh cinta?!” Dengan nasib umat manusia yang dipertaruhkan, perang(kencan) berlanjut!"
+        />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/Deskription"
+        android:text="Watch Trailer Here"
+        android:onClick="playDateTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie2"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime12" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Golden Time"/>
+
+    <TextView
+        android:id="@+id/Deskription2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Akibat kecelakaan tragis, Banri Tada terkena amnesia, menghilangkan ingatan akan kampung halaman dan masa lalunya. Namun, setelah berteman dengan Mitsuo Yanagisawa, dia memutuskan untuk pindah dan memulai hidup baru di sekolah hukum di Tokyo. Namun ketika ia mulai menyesuaikan diri dengan kehidupan kampusnya, Kouko Kaga yang cantik secara dramatis menerobos kehidupan Banri, dan pertemuan mereka yang kebetulan menandai awal tahun yang tak terlupakan."
+        />
+
+    <Button
+        android:id="@+id/golden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/Deskription2"
+        android:text="Watch Trailer Here"
+        android:onClick="playGoldenTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie3"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime13" />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="5-toubun no Hanayome Movie"/>
+
+    <TextView
+        android:id="@+id/Deskription3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Fuutarou telah memimpin lima anak kembar lima hingga mereka bisa lulus dan mengejar impian mereka sendiri. Sekarang, akhirnya, mereka telah mencapai festival sekolah terakhir mereka. Setelah memutuskan untuk menjadikan peristiwa ini sebagai kenangan yang tak terlupakan, Fuutarou mencari perasaannya terhadap kelima kembar lima."
+        />
+
+    <Button
+        android:id="@+id/gotoubun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/Deskription3"
+        android:text="Watch Trailer Here"
+        android:onClick="playGotoubunTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie4"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime14" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Bokutachi wa Benkyou ga Dekinai"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Nariyuki Yuiga, seorang siswa sekolah menengah tahun ketiga yang miskin, bekerja tanpa lelah untuk menerima nominasi VIP, sebuah beasiswa yang akan menutupi seluruh biaya kuliahnya. Sebagai pengakuan atas kerja kerasnya, Kepala Sekolah memberinya beasiswa terkenal."
+        />
+
+    <Button
+        android:id="@+id/bokuben"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playBokubenTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie5"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime15" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Yahari Ore no Seishun Love Comedy wa Machigatteiru (Oregairu)"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Hachiman Hikigaya adalah siswa SMA apatis dengan kecenderungan narsis dan semi nihilistik. Dia sangat percaya bahwa masa muda yang penuh kegembiraan hanyalah sebuah lelucon, dan siapa pun yang mengatakan sebaliknya hanyalah berbohong pada diri mereka sendiri."
+        />
+
+    <Button
+        android:id="@+id/oregairu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playOregairuTrailer"/>
+
+ </LinearLayout>
+</ScrollView>
+</RelativeLayout>

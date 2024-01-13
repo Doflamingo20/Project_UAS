@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/imgMovie"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:src="@drawable/anime6" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Danshi Koukousei no Nichijou"/>
+
+    <TextView
+        android:id="@+id/Deskription"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Berkeliaran di aula SMA Sanada Utara yang khusus laki-laki adalah tiga kawan dekat: pemimpin eksentrik dengan imajinasi hiperaktif Hidenori, Yoshitake yang penuh gairah, dan Tadakuni yang rasional dan bijaksana. Kehidupan mereka dipenuhi dengan robot raksasa, cinta sejati, dan drama yang intens... setidaknya dalam imajinasi mereka yang penuh warna. Kenyataannya, mereka hanyalah trio pria biasa yang mencoba menghabiskan waktu, tapi siapa bilang kehidupan sehari-hari tidak menarik? Baik itu peragaan RPG yang rumit atau pertemuan romantis yang tak terduga di tepi sungai saat matahari terbenam, Danshi Koukousei no Nichijou penuh dengan situasi aneh namun lucu yang tidak biasa-biasa saja."
+        />
+
+    <Button
+        android:id="@+id/danshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/Deskription"
+        android:text="Watch Trailer Here"
+        android:onClick="playDanshiTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie2"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime7" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Gintama: The Final"/>
+
+    <TextView
+        android:id="@+id/Deskription2"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Dua tahun telah berlalu setelah invasi Tendoshuu ke Terminal Pusat O-Edo. Sejak itu, Yorozuya berpisah. Meramalkan kembalinya Utsuro, Gintoki Sakata mulai mengamati garis ley Bumi untuk mencari jejak Altana milik orang lain. Setelah bertemu dengan sisa-sisa Tendoshuu—yang terus mencari keabadian—Gintoki kembali ke Edo."
+        />
+
+    <Button
+        android:id="@+id/gintama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_below="@id/Deskription2"
+        android:text="Watch Trailer Here"
+        android:onClick="playGintamaTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie3"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime8" />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Grand Blue"/>
+
+    <TextView
+        android:id="@+id/Deskription3"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Iori Kitahara pindah ke kota pesisir Izu untuk tahun pertamanya di universitas tersebut, dan bertempat tinggal di atas Grand Blue, toko selam scuba milik pamannya. Iori memiliki harapan dan impian yang tinggi untuk mendapatkan pengalaman kuliah yang ideal, tetapi ketika dia memasuki toko, dia tersedot ke dalam aktivitas alkoholik dari anggota Klub Selam yang riang dan sering mengunjungi tempat itu. Dibujuk oleh kakak kelas Shinji Tokita dan Ryuujirou Kotobuki, Iori dengan enggan bergabung dengan pesta aneh mereka. Sepupunya Chisa Kotegawa kemudian masuk dan memergokinya sedang beraksi, membuat Iori sangat meremehkannya."
+        />
+
+    <Button
+        android:id="@+id/grand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/Deskription3"
+        android:text="Watch Trailer Here"
+        android:onClick="playGrandTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie4"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime9" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Kono Subarashii Sekai ni Shukufuku wo!"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Setelah meninggal dalam kematian yang menggelikan dan menyedihkan dalam perjalanan kembali dari membeli permainan, siswa sekolah menengah dan pertapa Kazuma Satou menemukan dirinya duduk di hadapan dewi cantik namun menjengkelkan bernama Aqua. Dia memberi NEET dua pilihan: melanjutkan ke surga atau bereinkarnasi dalam impian setiap gamer—dunia fantasi nyata! Memilih untuk memulai hidup baru, Kazuma dengan cepat ditugaskan untuk mengalahkan Raja Iblis yang meneror desa. Tapi sebelum dia pergi, dia bisa memilih satu item apapun untuk membantunya dalam pencariannya, dan pahlawan masa depan memilih Aqua. Tapi Kazuma telah membuat kesalahan besar—Aqua sama sekali tidak berguna!"
+        />
+
+    <Button
+        android:id="@+id/konosuba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playKonosubaTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie5"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime10" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Saiki Kusuo no Ψ-nan"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Bagi kebanyakan orang, kemampuan psikis mungkin tampak seperti sebuah berkah; namun bagi Kusuo Saiki, hal ini jauh dari kebenaran. Diberkahi dengan berbagai macam kemampuan supernatural mulai dari telepati hingga penglihatan x-ray, dia mendapati apa yang disebut sebagai berkah ini hanyalah sebuah kutukan. Karena semua ketidaknyamanan yang disebabkan oleh kekuatannya terus menumpuk, yang Kusuo inginkan hanyalah kehidupan biasa, tanpa kerumitan—kehidupan di mana ketidaktahuan adalah kebahagiaan."
+        />
+
+    <Button
+        android:id="@+id/saiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playSaikiTrailer"/>
+
+  </LinearLayout>
+</ScrollView>
+</RelativeLayout>

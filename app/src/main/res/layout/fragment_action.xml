@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="25dp"
+    tools:context=".ActionFragment">
+    
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgMovie"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/anime1" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:text="Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Deskription"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Movie Tensei shitara Slime Datta Ken : Guren no Kizuna-hen atau That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond bercerita Rimuru dan teman-temannya terlibat dalam konspirasi lama di negara baru bernama Razha terkait dengan seorang gadis yang memiliki kekuatan misterius. Rimuru dan Benimaru bertemu dengan ogre lain bernama Hiiro yang dulu sangat menghormati Benimaru."
+        />
+
+
+    <Button
+        android:id="@+id/tensura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_below="@id/Deskription"
+        android:text="Watch Trailer Here"
+        android:onClick="playTensuraTrailer"/>
+
+
+    <ImageView
+        android:id="@+id/imgMovie2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime2" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Boku no Hero Academia: World Heroes’ Mission"/>
+
+    <TextView
+        android:id="@+id/Deskription2"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Menceritakan tentang doktrin Teori Kiamat Bakat, kelompok ideologis Humarise yakin bahwa semua manusia yang memiliki bakat adalah penyakit dan harus dibasmi. Untuk membangun kembali dunia, kelompok ekstremis telah menciptakan perangkat mematikan yang dikenal sebagai “Bom Pemicu” yang menyebabkan orang-orang yang memikili bakat akan kehilangan kendali dan mati." />
+    <Button
+        android:id="@+id/bokunohero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie2"
+        android:layout_below="@id/Deskription2"
+        android:text="Watch Trailer Here"
+        android:onClick="playBokunoheroTrailer"/>
+
+    <ImageView
+        android:id="@+id/imgMovie3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime3" />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Sword Art Online the Movie: Ordinal Scale"/>
+
+    <TextView
+        android:id="@+id/Deskription3"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Asuna, Lisbeth dan Silica mendorong Kirito untuk bermain OS setelah mendengar bahwa Aincrad boss telah muncul. Kirito bergabung Asuna dan Klein dalam pertarungan boss mana maskot game, pertama AI penyanyi idola Yuna, muncul dan memberikan pemain penyuka efek sambil bernyanyi. Kirito gagal untuk mencapai sesuatu karena kurangnya kekuatan fisik dan kecepatan. Eiji, nomor dua pemain, pembantu kelompok dalam mengalahkan boss. Sebelum Asuna membuat pukulan membunuh, Eiji berbisik kata “Switch,” montir permainan dari SAO bahwa dia mengakui."
+        />
+
+    <Button
+        android:id="@+id/sword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/Deskription3"
+        android:text="Watch Trailer Here"
+        android:onClick="playSwordTrailer" />
+
+    <ImageView
+        android:id="@+id/imgMovie4"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime4" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Black Clover: Mahou Tei no Ken"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Black Clover: Sword of the Wizard King atau Black Clover: Mahou Tei no Ken Ini adalah dunia di mana sihir adalah segalanya. Asta adalah anak laki-laki yang lahir tanpa bisa menggunakan sihir, telah bertarung melawan banyak musuh yang kuat bersama dengan rivalnya, Yuno. Keduanya berjuang untuk menjadi penyihir tinggi, “Kaisar Sihir”."
+        />
+
+    <Button
+        android:id="@+id/clover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playCloverTrailer" />
+
+    <ImageView
+        android:id="@+id/imgMovie5"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime5" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Fuuto Tantei"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="5"
+        android:textColor="@color/black"
+        android:text="Detective Futo (Fuuto Tantei) atau Fuuto PI merupakan anime adaptasi manga serial Tokusatsu dengan judul yang sama. Manga sekaligus seri live action Kamen Rider W tersebut telah tayang pada tahun 2009 lalu."
+        />
+
+    <Button
+        android:id="@+id/fuuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playFuutoTrailer" />
+
+ </LinearLayout>
+</ScrollView>
+</RelativeLayout>
