@@ -24,11 +24,15 @@ Dosen Pengampu   : Donny Maulana, S.Kom., M.M.S.I.
 
 
 
-- **[Penjelasan & Hasil Program Tugas ](#penjelasan--hasil-program-tugas)**
+- **[Penjelasan & Cara Penerapan Code](#penjelasan--cara-penerapan-code)**
 
 
 
-- **[Demo Tugas](#demo-tugas)**
+- **[Hasil Design](#hasil-design)**
+
+
+
+- **[Demo Program](#demo-program)**
 
 
 ## Tugas
@@ -40,7 +44,7 @@ Dosen Pengampu   : Donny Maulana, S.Kom., M.M.S.I.
 > **Pada tugas kali saya juga akan menambahkan video trailer di setiap film**
 
 
-## Penjelasan & Hasil Program Tugas
+## Penjelasan & Cara Penerapan Code
 
 > Pada tugas kali ini saya melakukan perubahan pada nama aplikasi, lalu gambar icon aplikasi dan juga pada splashscreen, untuk cara dan isi code nya sama seperti pada tugas sebelumnya hanya menyesuaikan saja dengan yang baru.
 
@@ -2143,7 +2147,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
 </menu>
 ```
 
-> **Hasil Program Tugas:**
+## Hasil Design
 
 ![Home](https://github.com/Doflamingo20/Project_UAS/assets/130146099/2eafdd05-0afb-45f9-bdf4-50c0b6427207)
 ![Action1](https://github.com/Doflamingo20/Project_UAS/assets/130146099/bd5fa1e5-203f-4706-b8e9-2040e75029cf)
@@ -2155,7 +2159,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
 
 
 
-## Demo Tugas
+## Demo Program
 
 
 
