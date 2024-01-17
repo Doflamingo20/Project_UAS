@@ -1,4 +1,4 @@
-# UAS_PEMROGMOBILE
+# UAS_PEMROGRAMAN_MOBILE
 
 
 Nama    : Dimas Aditya Putranto
@@ -20,28 +20,28 @@ Dosen Pengampu   : Donny Maulana, S.Kom., M.M.S.I.
 ***Harap klik satu persatu agar update penjelasan dan hasil program terlihat berurutan***
 
 
-- **[Tugas 3](#tugas-3)**
+- **[Tugas](#tugas)**
 
 
 
-- **[Penjelasan & Hasil Program Tugas 3](#penjelasan--hasil-program-tugas-3)**
+- **[Penjelasan & Hasil Program Tugas ](#penjelasan--hasil-program-tugas)**
 
 
 
-- **[Demo Tugas 3](#demo-tugas-3)**
+- **[Demo Tugas](#demo-tugas)**
 
 
-## Tugas 3
+## Tugas
 ![ss](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/3d0cbe78-76f1-405f-948d-78ca1c4eb884)
 
 
 
-> **Pada tugas 3 saya juga akan menambahkan video trailer di setiap film**
+> **Pada tugas kali saya juga akan menambahkan video trailer di setiap film**
 
 
-## Penjelasan & Hasil Program Tugas 3 
+## Penjelasan & Hasil Program Tugas
 
-> Pada tugas 3 saya melakukan perubahan pada nama aplikasi, lalu gambar icon aplikasi dan juga pada splashscreen, untuk cara dan isi code nya sama seperti pada tugas 2 hanya menyesuaikan saja dengan yang baru.
+> Pada tugas kali ini saya melakukan perubahan pada nama aplikasi, lalu gambar icon aplikasi dan juga pada splashscreen, untuk cara dan isi code nya sama seperti pada tugas 2 hanya menyesuaikan saja dengan yang baru.
 
 **Fill in All The Code in This Project :**
 > 1. ***Gradle Script*** => `build.gradle.kts (Module :app)`
@@ -1771,13 +1771,13 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
 </menu>
 ```
 
-> **Hasil Program Tugas 3 :**
+> **Hasil Program Tugas:**
 
 ![Picsart_24-01-12_16-49-12-992](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/61039b18-4f9d-47e5-9198-f39505de492a)
 ![Picsart_24-01-12_16-53-59-304](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/71c61285-fe8a-444e-87b5-ca0b05716ed8)
 
 
-## Demo Tugas 3
+## Demo Tugas
 
 
 
