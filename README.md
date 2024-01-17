@@ -32,7 +32,8 @@ Dosen Pengampu   : Donny Maulana, S.Kom., M.M.S.I.
 
 
 ## Tugas
-![ss](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/3d0cbe78-76f1-405f-948d-78ca1c4eb884)
+![Soal](https://github.com/Doflamingo20/Project_UAS/assets/130146099/6d167755-7c30-45e2-875d-88fa2c0b7d13)
+
 
 
 
@@ -1773,7 +1774,8 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
 
 > **Hasil Program Tugas:**
 
-![Picsart_24-01-12_16-49-12-992](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/61039b18-4f9d-47e5-9198-f39505de492a)
+![Home1](https://github.com/Doflamingo20/Project_UAS/assets/130146099/4ecdbfbd-c701-42cb-a6e5-2bea10ca742b)
+
 ![Picsart_24-01-12_16-53-59-304](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/71c61285-fe8a-444e-87b5-ca0b05716ed8)
 
 
