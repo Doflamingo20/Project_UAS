@@ -1781,7 +1781,9 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
 
 
 
-https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/f5281018-b815-4a28-afb5-d88a1f492165
+https://github.com/Doflamingo20/Project_UAS/assets/130146099/a669a6ab-d663-4fc2-89a7-69f8b494f4a9
+
+
 
 
 
