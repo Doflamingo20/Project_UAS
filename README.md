@@ -1774,9 +1774,10 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
 
 > **Hasil Program Tugas:**
 
-![Home1](https://github.com/Doflamingo20/Project_UAS/assets/130146099/4ecdbfbd-c701-42cb-a6e5-2bea10ca742b)
+![Home](https://github.com/Doflamingo20/Project_UAS/assets/130146099/2eafdd05-0afb-45f9-bdf4-50c0b6427207)
+![Action2](https://github.com/Doflamingo20/Project_UAS/assets/130146099/da8f81cc-3c7c-417e-8791-1ab4488a9fc3)
+![Action1](https://github.com/Doflamingo20/Project_UAS/assets/130146099/bd5fa1e5-203f-4706-b8e9-2040e75029cf)
 
-![Picsart_24-01-12_16-53-59-304](https://github.com/IdrisSyahrudin/Final_Project/assets/129921422/71c61285-fe8a-444e-87b5-ca0b05716ed8)
 
 
 ## Demo Tugas
