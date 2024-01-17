@@ -2165,4 +2165,4 @@ https://github.com/Doflamingo20/Project_UAS/assets/130146099/a669a6ab-d663-4fc2-
 
 
 
-## Semoga Bermanfaat, Terima Kasih 
+## Semoga Membantu, Sekian dan Terima Kasih 
