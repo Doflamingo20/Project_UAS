@@ -52,13 +52,13 @@ plugins {
 }
 
 android {
-    namespace = "com.UAS"
+    namespace = "com.example.project_uas"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.UAS"
-        minSdk = 21
-        targetSdk = 33
+        applicationId = "com.example.project_uas"
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -68,26 +68,28 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
-    val fragment_version = "1.6.1"
+
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation("androidx.fragment:fragment:$fragment_version")
 }
+
 ```
 - Setelah itu klik `Sync now`
 
@@ -102,7 +104,7 @@ dependencies {
 => Pada `MainActivity.java` saya melakukan penambahan code, yaitu isi code keseluruhannya adalah :
 - `MainAcitivity.java`
 ```
-package com.cipaapps;
+package com.example.project_uas;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -202,15 +204,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
 ```
-> Note : Isi code pada keseluruhan tugas 3 ini tetap sama seperti pada isi code tugas 2 yaitu seperti *Java class* dan untuk *res/layout* hanya sedikit merubah design, pada tugas 3 ini saya hanya mencantumkan dan menjelaskan code-code yang ditambahkan untuk `Fragment` saja.
+> Note : Isi code pada keseluruhan tugas kali ini tetap sama seperti pada isi code tugas sebelumnya yaitu seperti *Java class* dan untuk *res/layout* hanya sedikit merubah design, pada tugas ini saya hanya mencantumkan dan menjelaskan code-code yang ditambahkan untuk `Fragment` saja.
 
 
 - Untuk package name bisa di sesuaikan dengan package name project kita masing-masing, disini saya melanjutkan dari package name project sebelumnya.
 
 => `FragmentActivity.java`
 ```
-package com.UAS;
+package com.example.project_uas;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -218,11 +226,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -302,12 +305,13 @@ public class FragmentActivity extends AppCompatActivity {
 
     }
 }
+
 ```
 => Membuat file fragment dengan cara klik kanan pada `MainActivity.java` lalu pilih dan klik fragment, setelah itu kita pilih dan klik fragment (Blank), setelah itu kita beri nama `ActionFragment`, `ComedyFragment`, `RomanceFragment`. Untuk file fragment sudah sekaligus dengan file layout xml nya (code berada pada bagian res `layout`)
 
 - `ActionFragment.java` :
 ```
-package com.UAS;
+package com.example.project_uas;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -336,32 +340,50 @@ public class ActionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_action, container, false);
 
         // Find the button by its ID
-        Button avengerButton = view.findViewById(R.id.avenger);
-        Button myNameButton = view.findViewById(R.id.myname);
-        Button spidermanButton = view.findViewById(R.id.spiderman);
+        Button tensuraButton = view.findViewById(R.id.tensura);
+        Button bokunoheroButton = view.findViewById(R.id.bokunohero);
+        Button swordButton = view.findViewById(R.id.sword);
+        Button cloverButton = view.findViewById(R.id.clover);
+        Button fuutoButton = view.findViewById(R.id.fuuto);
 
         // Set click listener for each button
-        avengerButton.setOnClickListener(new View.OnClickListener() {
+        tensuraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Avenger button clicked");
-                playVideo(R.raw.avenger);
+                Log.d(TAG, "Tensura button clicked");
+                playVideo(R.raw.tensura);
             }
         });
 
-        myNameButton.setOnClickListener(new View.OnClickListener() {
+        bokunoheroButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "MyName button clicked");
-                playVideo(R.raw.myname);
+                Log.d(TAG, "Transformers button clicked");
+                playVideo(R.raw.bokunohero);
             }
         });
 
-        spidermanButton.setOnClickListener(new View.OnClickListener() {
+        swordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Spiderman button clicked");
-                playVideo(R.raw.spiderman);
+                Log.d(TAG, "Sword button clicked");
+                playVideo(R.raw.sword);
+            }
+        });
+
+        cloverButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Clover button clicked");
+                playVideo(R.raw.clover);
+            }
+        });
+
+        fuutoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Fuuto button clicked");
+                playVideo(R.raw.fuuto);
             }
         });
 
@@ -381,7 +403,6 @@ public class ActionFragment extends Fragment {
         }
         return true;
     }
-
     private void playVideo(int videoResource) {
         String videoPath = "android.resource://" + getActivity().getPackageName() + "/" + videoResource;
         Intent intent = new Intent(getActivity(), VideoPlayerActivity.class);
@@ -389,10 +410,11 @@ public class ActionFragment extends Fragment {
         startActivity(intent);
     }
 }
+
 ```
 - `ComedyFragment.java` :
 ```
-package com.UAS;
+package com.example.project_uas;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -421,32 +443,50 @@ public class ComedyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_comedy, container, false);
 
         // Find the button by its ID
-        Button cektokosebelahButton = view.findViewById(R.id.cektokosebelah);
-        Button friendzoneButton = view.findViewById(R.id.friendzone);
-        Button hospitalplaylistButton = view.findViewById(R.id.hospitalplaylist);
+        Button danshiButton = view.findViewById(R.id.danshi);
+        Button gintamaButton = view.findViewById(R.id.gintama);
+        Button grandButton = view.findViewById(R.id.grand);
+        Button konosubaButton = view.findViewById(R.id.konosuba);
+        Button saikiButton = view.findViewById(R.id.saiki);
 
         // Set click listener for each button
-        cektokosebelahButton.setOnClickListener(new View.OnClickListener() {
+        danshiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Cektokosebelah2 button clicked");
-                playVideo(R.raw.cektokosebelah2);
+                Log.d(TAG, "Danshi button clicked");
+                playVideo(R.raw.danshi);
             }
         });
 
-        friendzoneButton.setOnClickListener(new View.OnClickListener() {
+        gintamaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Friendzone button clicked");
-                playVideo(R.raw.friendzone);
+                Log.d(TAG, "Gintama button clicked");
+                playVideo(R.raw.gintama);
             }
         });
 
-        hospitalplaylistButton.setOnClickListener(new View.OnClickListener() {
+        grandButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "HospitalPlaylist button clicked");
-                playVideo(R.raw.hospitalplaylist);
+                Log.d(TAG, "Grand button clicked");
+                playVideo(R.raw.grand);
+            }
+        });
+
+        konosubaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Konosuba button clicked");
+                playVideo(R.raw.konosuba);
+            }
+        });
+
+        saikiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Saiki button clicked");
+                playVideo(R.raw.saiki);
             }
         });
 
@@ -474,11 +514,12 @@ public class ComedyFragment extends Fragment {
         startActivity(intent);
     }
 }
+
 ```
 
 - `RomanceFragment.java` :
 ```
-package com.UAS;
+package com.example.project_uas;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -494,8 +535,6 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.cipaapps.VideoPlayerActivity;
-
 
 public class RomanceFragment extends Fragment {
 
@@ -509,32 +548,50 @@ public class RomanceFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_romance, container, false);
 
         // Find the button by its ID
-        Button centurygirlButton = view.findViewById(R.id.centurygirl);
-        Button cheerupButton = view.findViewById(R.id.cheerup);
-        Button hiddenloveButton = view.findViewById(R.id.hiddenlove);
+        Button dateButton = view.findViewById(R.id.date);
+        Button goldenButton = view.findViewById(R.id.golden);
+        Button gotoubunButton = view.findViewById(R.id.gotoubun);
+        Button bokubenButton = view.findViewById(R.id.bokuben);
+        Button oregairuButton = view.findViewById(R.id.oregairu);
 
         // Set click listener for each button
-        centurygirlButton.setOnClickListener(new View.OnClickListener() {
+        dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Centurygirl button clicked");
-                playVideo(R.raw.centurygirl);
+                Log.d(TAG, "Date button clicked");
+                playVideo(R.raw.date);
             }
         });
 
-        cheerupButton.setOnClickListener(new View.OnClickListener() {
+        goldenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Cheerup button clicked");
-                playVideo(R.raw.cheerup);
+                Log.d(TAG, "Golden button clicked");
+                playVideo(R.raw.golden);
             }
         });
 
-        hiddenloveButton.setOnClickListener(new View.OnClickListener() {
+        gotoubunButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Hiddenlove button clicked");
-                playVideo(R.raw.hiddenlove);
+                Log.d(TAG, "Gotoubun button clicked");
+                playVideo(R.raw.gotoubun);
+            }
+        });
+
+        bokubenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Bokuben button clicked");
+                playVideo(R.raw.bokuben);
+            }
+        });
+
+        oregairuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "Oregairu button clicked");
+                playVideo(R.raw.oregairu);
             }
         });
 
@@ -562,11 +619,12 @@ public class RomanceFragment extends Fragment {
         startActivity(intent);
     }
 }
+
 ```
 
 => Lalu buat java class dengan nama `ViewAdapter.java`, yang berisi code :
 ```
-package com.UAS;
+package com.example.project_uas;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -602,7 +660,7 @@ public class ViewAdapter extends FragmentStateAdapter {
 
 => Setelah itu membuat java class untuk memutar video dengan nama `VideoPlayerActivity.java`, yang berisi code :
 ```
-package com.UAS;
+package com.example.project_uas;
 
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -731,6 +789,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
 ```
 
 
@@ -839,7 +898,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_menu"
+    android:background="@drawable/bg2"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -853,7 +912,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
             android:layout_centerHorizontal="true"
             android:text="Menu Program"
             android:fontFamily="serif"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="35sp"
             android:layout_marginTop="35dp"/>
@@ -892,7 +951,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/worldwide" />
+                        android:src="@drawable/hello" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -929,7 +988,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mathematics_symbols" />
+                        android:src="@drawable/math" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -966,14 +1025,14 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/script" />
+                        android:src="@drawable/scroll" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="serif"
-                        android:text="ICE COLD!"
+                        android:text="SIANIDA"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -1003,7 +1062,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/messaging" />
+                        android:src="@drawable/two" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1040,7 +1099,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/alarm__1_" />
+                        android:src="@drawable/alarm" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1077,7 +1136,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/gps" />
+                        android:src="@drawable/maps" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1114,7 +1173,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/movies" />
+                        android:src="@drawable/movie" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1151,7 +1210,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/serendipityapps" />
+                        android:src="@drawable/splash2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1188,7 +1247,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/serendipityapps" />
+                        android:src="@drawable/splash2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1225,7 +1284,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/serendipityapps" />
+                        android:src="@drawable/splash2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1249,14 +1308,15 @@ public class VideoPlayerActivity extends AppCompatActivity {
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:fontFamily="monospace"
-            android:text="© 2024 Idris Syahrudin"
-            android:textColor="@color/black"
+            android:text="© 2024 Dimas Aditya"
+            android:textColor="@color/white"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
     </RelativeLayout>
 
 </ScrollView>
+
 ```
 
 - `activity_movie.xml` :
@@ -1335,22 +1395,34 @@ public class VideoPlayerActivity extends AppCompatActivity {
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="25dp"
     tools:context=".ActionFragment">
+    
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imgMovie"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:src="@drawable/film1"/>
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/anime1" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
+        android:layout_width="331dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
-        android:layout_marginStart="16dp"
-        android:textSize="16sp"
+        android:text="Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen"
         android:textColor="@color/black"
-        android:text="AVENGERS : END GAME"/>
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/Deskription"
@@ -1360,29 +1432,30 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
-        android:maxLines="5"
+        android:maxLines="10"
         android:textColor="@color/black"
-        android:text="The story of the Avengers efforts to restore parts of the universe that were destroyed after the events of Infinity War. Using time travel technology, they attempt to steal the Infinity Stones to overcome the destruction caused by Thanos. An epic battle takes place, culminating in a great sacrifice and victory that changes the fate of the universe."/>
+        android:text="Movie Tensei shitara Slime Datta Ken : Guren no Kizuna-hen atau That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond bercerita Rimuru dan teman-temannya terlibat dalam konspirasi lama di negara baru bernama Razha terkait dengan seorang gadis yang memiliki kekuatan misterius. Rimuru dan Benimaru bertemu dengan ogre lain bernama Hiiro yang dulu sangat menghormati Benimaru."
+        />
 
 
     <Button
-        android:id="@+id/avenger"
+        android:id="@+id/tensura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_below="@id/Deskription"
-        android:text="Watch Trailer Now"
-        android:onClick="playAvengerTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playTensuraTrailer"/>
 
 
     <ImageView
         android:id="@+id/imgMovie2"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/film4"/>
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime2" />
 
     <TextView
         android:id="@+id/tvTitle2"
@@ -1390,10 +1463,11 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imgMovie2"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
-        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="MY NAME"/>
+        android:text="Boku no Hero Academia: World Heroes’ Mission"/>
 
     <TextView
         android:id="@+id/Deskription2"
@@ -1402,28 +1476,27 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="210dp"
-        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
         android:textColor="@color/black"
-        android:text="The story of Yoon Ji-woo, a woman who disguises herself as a member of a criminal gang to investigate her father's death. On his journey to find the truth, Ji-woo becomes involved in conflicts and dark secrets that lead to a battle between justice and ambition in the criminal world. This story shows Ji-woo's struggle to understand his identity while avenging his family, bringing a sense of tension and intrigue to each episode."/>
-
+        android:text="Menceritakan tentang doktrin Teori Kiamat Bakat, kelompok ideologis Humarise yakin bahwa semua manusia yang memiliki bakat adalah penyakit dan harus dibasmi. Untuk membangun kembali dunia, kelompok ekstremis telah menciptakan perangkat mematikan yang dikenal sebagai “Bom Pemicu” yang menyebabkan orang-orang yang memikili bakat akan kehilangan kendali dan mati." />
     <Button
-        android:id="@+id/myname"
+        android:id="@+id/bokunohero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie2"
         android:layout_below="@id/Deskription2"
-        android:text="Watch Trailer Now"
-        android:onClick="playMyNameTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playBokunoheroTrailer"/>
 
     <ImageView
         android:id="@+id/imgMovie3"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/film5"/>
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime3" />
 
     <TextView
         android:id="@+id/tvTitle3"
@@ -1431,10 +1504,11 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imgMovie3"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="400dp"
-        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="SPIDERMAN : NO WAY HOME"/>
+        android:text="Sword Art Online the Movie: Ordinal Scale"/>
 
     <TextView
         android:id="@+id/Deskription3"
@@ -1443,23 +1517,113 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="420dp"
-        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
         android:textColor="@color/black"
-        android:text="Peter Parker tries to fix the mess after his Spider-Man identity is revealed and his personal life is threatened. Peter enlists the help of Doctor Strange to use magic gone wrong, opening the multiverse and bringing forth a version of Spider-Man from a parallel reality. Along with the other Spider-Men, Peter confronts villains from the past and faces serious consequences in their efforts to right those wrongs."
+        android:text="Asuna, Lisbeth dan Silica mendorong Kirito untuk bermain OS setelah mendengar bahwa Aincrad boss telah muncul. Kirito bergabung Asuna dan Klein dalam pertarungan boss mana maskot game, pertama AI penyanyi idola Yuna, muncul dan memberikan pemain penyuka efek sambil bernyanyi. Kirito gagal untuk mencapai sesuatu karena kurangnya kekuatan fisik dan kecepatan. Eiji, nomor dua pemain, pembantu kelompok dalam mengalahkan boss. Sebelum Asuna membuat pukulan membunuh, Eiji berbisik kata “Switch,” montir permainan dari SAO bahwa dia mengakui."
         />
 
     <Button
-        android:id="@+id/spiderman"
+        android:id="@+id/sword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie3"
         android:layout_below="@id/Deskription3"
-        android:text="Watch Trailer Now"
-        android:onClick="playSpidermanTrailer" />
+        android:text="Watch Trailer Here"
+        android:onClick="playSwordTrailer" />
+
+    <ImageView
+        android:id="@+id/imgMovie4"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime4" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Black Clover: Mahou Tei no Ken"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Black Clover: Sword of the Wizard King atau Black Clover: Mahou Tei no Ken Ini adalah dunia di mana sihir adalah segalanya. Asta adalah anak laki-laki yang lahir tanpa bisa menggunakan sihir, telah bertarung melawan banyak musuh yang kuat bersama dengan rivalnya, Yuno. Keduanya berjuang untuk menjadi penyihir tinggi, “Kaisar Sihir”."
+        />
+
+    <Button
+        android:id="@+id/clover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playCloverTrailer" />
+
+    <ImageView
+        android:id="@+id/imgMovie5"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anime5" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Fuuto Tantei"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_toRightOf="@id/imgMovie3"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="5"
+        android:textColor="@color/black"
+        android:text="Detective Futo (Fuuto Tantei) atau Fuuto PI merupakan anime adaptasi manga serial Tokusatsu dengan judul yang sama. Manga sekaligus seri live action Kamen Rider W tersebut telah tayang pada tahun 2009 lalu."
+        />
+
+    <Button
+        android:id="@+id/fuuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playFuutoTrailer" />
+
+ </LinearLayout>
+</ScrollView>
 </RelativeLayout>
+
 ```
 
 - `fragment_comedy.xml`
@@ -1471,11 +1635,20 @@ public class VideoPlayerActivity extends AppCompatActivity {
     android:layout_height="wrap_content"
     android:padding="25dp">
 
-    <ImageView
-        android:id="@+id/imgMovie"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:src="@drawable/film2"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/imgMovie"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:src="@drawable/anime6" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -1483,9 +1656,11 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_marginStart="16dp"
-        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="CEK TOKO SEBELAH 2"/>
+        android:text="Danshi Koukousei no Nichijou"/>
 
     <TextView
         android:id="@+id/Deskription"
@@ -1495,105 +1670,198 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
-        android:maxLines="5"
+        android:maxLines="15"
         android:textColor="@color/black"
-        android:text="The film Cek Toko Sebelah 2 continues the story of the Soleh family and their humorous conflict when they discover that the shop next door to them is about to be renovated into a hipster cafe. In his efforts to maintain a traditional shop, Soleh must face the challenges of modernization while maintaining family relationships. With a distinctive comedy flavor, this film depicts changing times and family values in a light and entertaining atmosphere."
+        android:text="Berkeliaran di aula SMA Sanada Utara yang khusus laki-laki adalah tiga kawan dekat: pemimpin eksentrik dengan imajinasi hiperaktif Hidenori, Yoshitake yang penuh gairah, dan Tadakuni yang rasional dan bijaksana. Kehidupan mereka dipenuhi dengan robot raksasa, cinta sejati, dan drama yang intens... setidaknya dalam imajinasi mereka yang penuh warna. Kenyataannya, mereka hanyalah trio pria biasa yang mencoba menghabiskan waktu, tapi siapa bilang kehidupan sehari-hari tidak menarik? Baik itu peragaan RPG yang rumit atau pertemuan romantis yang tak terduga di tepi sungai saat matahari terbenam, Danshi Koukousei no Nichijou penuh dengan situasi aneh namun lucu yang tidak biasa-biasa saja."
         />
 
     <Button
-        android:id="@+id/cektokosebelah"
+        android:id="@+id/danshi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_below="@id/Deskription"
-        android:text="Watch Trailer Now"
-        android:onClick="playCektokosebelah2Trailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playDanshiTrailer"/>
 
-    <ImageView
-        android:id="@+id/imgMovie2"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/film6"/>
+      <ImageView
+          android:id="@+id/imgMovie2"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime7" />
 
     <TextView
         android:id="@+id/tvTitle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie2"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
-        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="FRIENDZONE"/>
+        android:text="Gintama: The Final"/>
 
     <TextView
         android:id="@+id/Deskription2"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie2"
         android:layout_below="@id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="210dp"
-        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        android:maxLines="10"
         android:textColor="@color/black"
-        android:text="The story centers on old friends, Palm and Gink, who love each other but are afraid to express their feelings. The two had a close relationship, but when Palm confessed her feelings, Gink stated that she only saw him as a friend. The film presents Palm's emotional journey in maintaining their friendship, touching on themes of unrequited love and the complexity of sibling relationships."
+        android:text="Dua tahun telah berlalu setelah invasi Tendoshuu ke Terminal Pusat O-Edo. Sejak itu, Yorozuya berpisah. Meramalkan kembalinya Utsuro, Gintoki Sakata mulai mengamati garis ley Bumi untuk mencari jejak Altana milik orang lain. Setelah bertemu dengan sisa-sisa Tendoshuu—yang terus mencari keabadian—Gintoki kembali ke Edo."
         />
 
     <Button
-        android:id="@+id/friendzone"
+        android:id="@+id/gintama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie2"
         android:layout_below="@id/Deskription2"
-        android:text="Watch Trailer Now"
-        android:onClick="playFriendzoneTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playGintamaTrailer"/>
 
-    <ImageView
-        android:id="@+id/imgMovie3"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/film7"/>
+      <ImageView
+          android:id="@+id/imgMovie3"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime8" />
 
     <TextView
         android:id="@+id/tvTitle3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie3"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="400dp"
-        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="HOSPITAL PLAYLIST"/>
+        android:text="Grand Blue"/>
 
     <TextView
         android:id="@+id/Deskription3"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie3"
         android:layout_below="@id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="410dp"
-        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
         android:textColor="@color/black"
-        android:text="The Korean drama Hospital Playlist tells the story of five doctors who are friends and work together in the same hospital. They not only lead busy professional lives in the medical world, but also overcome challenges and joys in their personal lives. With warm humor and depth of character, the series provides an emotional and realistic portrait of friendship, love, and life in a hospital." />
+        android:text="Iori Kitahara pindah ke kota pesisir Izu untuk tahun pertamanya di universitas tersebut, dan bertempat tinggal di atas Grand Blue, toko selam scuba milik pamannya. Iori memiliki harapan dan impian yang tinggi untuk mendapatkan pengalaman kuliah yang ideal, tetapi ketika dia memasuki toko, dia tersedot ke dalam aktivitas alkoholik dari anggota Klub Selam yang riang dan sering mengunjungi tempat itu. Dibujuk oleh kakak kelas Shinji Tokita dan Ryuujirou Kotobuki, Iori dengan enggan bergabung dengan pesta aneh mereka. Sepupunya Chisa Kotegawa kemudian masuk dan memergokinya sedang beraksi, membuat Iori sangat meremehkannya."
+        />
 
     <Button
-        android:id="@+id/hospitalplaylist"
+        android:id="@+id/grand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/imgMovie"
+        android:layout_toRightOf="@id/imgMovie3"
         android:layout_below="@id/Deskription3"
-        android:text="Watch Trailer Now"
-        android:onClick="playHospitalPlaylistTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playGrandTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie4"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime9" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Kono Subarashii Sekai ni Shukufuku wo!"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Setelah meninggal dalam kematian yang menggelikan dan menyedihkan dalam perjalanan kembali dari membeli permainan, siswa sekolah menengah dan pertapa Kazuma Satou menemukan dirinya duduk di hadapan dewi cantik namun menjengkelkan bernama Aqua. Dia memberi NEET dua pilihan: melanjutkan ke surga atau bereinkarnasi dalam impian setiap gamer—dunia fantasi nyata! Memilih untuk memulai hidup baru, Kazuma dengan cepat ditugaskan untuk mengalahkan Raja Iblis yang meneror desa. Tapi sebelum dia pergi, dia bisa memilih satu item apapun untuk membantunya dalam pencariannya, dan pahlawan masa depan memilih Aqua. Tapi Kazuma telah membuat kesalahan besar—Aqua sama sekali tidak berguna!"
+        />
+
+    <Button
+        android:id="@+id/konosuba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playKonosubaTrailer"/>
+
+      <ImageView
+          android:id="@+id/imgMovie5"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="20dp"
+          android:src="@drawable/anime10" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Saiki Kusuo no Ψ-nan"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="15"
+        android:textColor="@color/black"
+        android:text="Bagi kebanyakan orang, kemampuan psikis mungkin tampak seperti sebuah berkah; namun bagi Kusuo Saiki, hal ini jauh dari kebenaran. Diberkahi dengan berbagai macam kemampuan supernatural mulai dari telepati hingga penglihatan x-ray, dia mendapati apa yang disebut sebagai berkah ini hanyalah sebuah kutukan. Karena semua ketidaknyamanan yang disebabkan oleh kekuatannya terus menumpuk, yang Kusuo inginkan hanyalah kehidupan biasa, tanpa kerumitan—kehidupan di mana ketidaktahuan adalah kebahagiaan."
+        />
+
+    <Button
+        android:id="@+id/saiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playSaikiTrailer"/>
+
+  </LinearLayout>
+</ScrollView>
 </RelativeLayout>
+
 ```
 
 - `fragment_romance.xml`
@@ -1605,11 +1873,20 @@ public class VideoPlayerActivity extends AppCompatActivity {
     android:layout_height="wrap_content"
     android:padding="25dp">
 
-    <ImageView
-        android:id="@+id/imgMovie"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:src="@drawable/film3"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+     <ImageView
+         android:id="@+id/imgMovie"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:src="@drawable/anime11" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -1618,9 +1895,10 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/imgMovie"
-        android:text="20TH CENTURY GIRL"
+        android:text="Date A Live Movie: Mayuri Judgment"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/Deskription"
@@ -1630,31 +1908,28 @@ public class VideoPlayerActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
-        android:maxLines="5"
+        android:maxLines="15"
         android:textColor="@color/black"
-        android:text="Tells the story of Na Bo-ra, a student who vows to follow Baek Hyun-jin for the sake of her sick friend. However, Bo-ra falls in love with Poong Woon-ho, Hyun-jin's best friend. In the confusion of the love triangle, Bo-ra hides her feelings so as not to hurt her best friend who turns out to love Woon-ho. When Woon-ho returns to New Zealand, Bo-ra and Yeon-du arrive at the train station at the right time, allowing them to confess their feelings before going their separate ways. However, Woon-ho suddenly disappears from Bo-ra's life, leaving her heart broken.
-
-Over time, Bo-ra enters university and lives an adult life. In 2019, he received an art exhibition invitation from Joseph, Woon-ho's younger brother. Here, Bo-ra learns that Woon-ho died in an accident years ago. Joseph thanks Bo-ra for remembering his brother and reveals that Woon-ho's happiest moments were with Bo-ra. While watching the video Woon-ho made, Bo-ra reflects on the happy memories they shared.
-
-Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of confusion, love, friendship and loss. This film depicts the complexity of human relationships over time, with a story that touches the heart and leaves a deep impression." />
+        android:text="Perang(Kencan),dilanjutkan.Hari-hari damai Itsuka Shidou kembali tanpa harus menyelamatkan para Roh dari hari-hari pertempuran tanpa henti. Tapi, hari-hari damai itu terganggu oleh munculnya bola misterius yang memancarkan gelombang spiritual――serta seorang gadis misterius yang muncul di saat yang sama. Apa tujuannya mengawasi Shidou……? Misi yang dipercayakan kepada Shidou dalam situasi tegang adalah,“Berkencan dengan semua Roh, dan buat mereka jatuh cinta?!” Dengan nasib umat manusia yang dipertaruhkan, perang(kencan) berlanjut!"
+        />
 
     <Button
-        android:id="@+id/centurygirl"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_below="@id/Deskription"
-        android:text="Watch Trailer Now"
-        android:onClick="playCenturygirlTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playDateTrailer"/>
 
-    <ImageView
-        android:id="@+id/imgMovie2"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/film8"/>
+     <ImageView
+         android:id="@+id/imgMovie2"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime12" />
 
     <TextView
         android:id="@+id/tvTitle2"
@@ -1662,10 +1937,11 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
-        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="CHEER UP"/>
+        android:text="Golden Time"/>
 
     <TextView
         android:id="@+id/Deskription2"
@@ -1674,29 +1950,30 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
         android:layout_below="@id/tvTitle"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
-        android:maxLines="5"
+        android:maxLines="15"
         android:textColor="@color/black"
-        android:text="Tells the story of a group of high school students who band together to form a cheerleading team at their school, trying to overcome academic pressure and teenage problems. With the struggles, conflicts, and friendships that develop among the team members, they learn to overcome life's difficulties and find strength in their unity. This story presents the dynamics of school life full of enthusiasm, with a touch of comedy and warmth in experiencing adolescence." />
+        android:text="Akibat kecelakaan tragis, Banri Tada terkena amnesia, menghilangkan ingatan akan kampung halaman dan masa lalunya. Namun, setelah berteman dengan Mitsuo Yanagisawa, dia memutuskan untuk pindah dan memulai hidup baru di sekolah hukum di Tokyo. Namun ketika ia mulai menyesuaikan diri dengan kehidupan kampusnya, Kouko Kaga yang cantik secara dramatis menerobos kehidupan Banri, dan pertemuan mereka yang kebetulan menandai awal tahun yang tak terlupakan."
+        />
 
     <Button
-        android:id="@+id/cheerup"
+        android:id="@+id/golden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_below="@id/Deskription2"
-        android:text="Watch Trailer Now"
-        android:onClick="playCheerupTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playGoldenTrailer"/>
 
-    <ImageView
-        android:id="@+id/imgMovie3"
-        android:layout_width="150dp"
-        android:layout_height="175dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/film9"/>
+     <ImageView
+         android:id="@+id/imgMovie3"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime13" />
 
     <TextView
         android:id="@+id/tvTitle3"
@@ -1704,10 +1981,11 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="400dp"
-        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="HIDDEN LOVE"/>
+        android:text="5-toubun no Hanayome Movie"/>
 
     <TextView
         android:id="@+id/Deskription3"
@@ -1716,23 +1994,116 @@ Set in 1999 and 2019, it takes the audience on Bo-ra's emotional journey full of
         android:layout_below="@id/tvTitle"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
-        android:maxLines="5"
+        android:maxLines="10"
         android:textColor="@color/black"
-        android:text="The storyline is about the complicated relationships among a group of close friends who grow up together and face various life trials. With secrets and conflicts emerging, they must struggle to understand and accept each other, while going on a journey to find love and identity. Through a story full of intrigue and emotion, Hidden Love reveals hidden layers of relationships and shows the journey towards maturity and understanding." />
+        android:text="Fuutarou telah memimpin lima anak kembar lima hingga mereka bisa lulus dan mengejar impian mereka sendiri. Sekarang, akhirnya, mereka telah mencapai festival sekolah terakhir mereka. Setelah memutuskan untuk menjadikan peristiwa ini sebagai kenangan yang tak terlupakan, Fuutarou mencari perasaannya terhadap kelima kembar lima."
+        />
 
     <Button
-        android:id="@+id/hiddenlove"
+        android:id="@+id/gotoubun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/imgMovie"
         android:layout_below="@id/Deskription3"
-        android:text="Watch Trailer Now"
-        android:onClick="playHiddenloveTrailer"/>
+        android:text="Watch Trailer Here"
+        android:onClick="playGotoubunTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie4"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime14" />
+
+    <TextView
+        android:id="@+id/tvTitle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Bokutachi wa Benkyou ga Dekinai"/>
+
+    <TextView
+        android:id="@+id/Deskription4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Nariyuki Yuiga, seorang siswa sekolah menengah tahun ketiga yang miskin, bekerja tanpa lelah untuk menerima nominasi VIP, sebuah beasiswa yang akan menutupi seluruh biaya kuliahnya. Sebagai pengakuan atas kerja kerasnya, Kepala Sekolah memberinya beasiswa terkenal."
+        />
+
+    <Button
+        android:id="@+id/bokuben"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie4"
+        android:layout_below="@id/Deskription4"
+        android:text="Watch Trailer Here"
+        android:onClick="playBokubenTrailer"/>
+
+     <ImageView
+         android:id="@+id/imgMovie5"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_marginTop="20dp"
+         android:src="@drawable/anime15" />
+
+    <TextView
+        android:id="@+id/tvTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Yahari Ore no Seishun Love Comedy wa Machigatteiru (Oregairu)"/>
+
+    <TextView
+        android:id="@+id/Deskription5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie"
+        android:maxLines="10"
+        android:textColor="@color/black"
+        android:text="Hachiman Hikigaya adalah siswa SMA apatis dengan kecenderungan narsis dan semi nihilistik. Dia sangat percaya bahwa masa muda yang penuh kegembiraan hanyalah sebuah lelucon, dan siapa pun yang mengatakan sebaliknya hanyalah berbohong pada diri mereka sendiri."
+        />
+
+    <Button
+        android:id="@+id/oregairu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgMovie5"
+        android:layout_below="@id/Deskription5"
+        android:text="Watch Trailer Here"
+        android:onClick="playOregairuTrailer"/>
+
+ </LinearLayout>
+</ScrollView>
 </RelativeLayout>
+
 ```
 => Pada directory `drawable` kita bisa tambahkan gambar seperti poster film yang ingin kita tampilkan, dan jangan lupa untuk menambahkan icon `baseline_more_vert_24.xml` dengan cara klik kanan pada `drawable` lalu klik New, setelah itu kita pilih dan klik Vector Asset. Setelah itu kita klik clip art lalu kita pilih icon nya, jika sudah ketemu kita klik OK lalu kita klik next. Sama halnya ketika kita ingin menambahkan menu kembali pada halaman `VideoPlayerActivity` yaitu dengan langkah-langkah yang sama seperti sebelumnya dan jangan lupa untuk menambahkan icon `baseline_arrorw_circle_left_24.xml` lalu klik OK dan kita klik next.
 
