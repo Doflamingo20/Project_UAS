@@ -42,7 +42,7 @@ Dosen Pengampu   : Donny Maulana, S.Kom., M.M.S.I.
 
 ## Penjelasan & Hasil Program Tugas
 
-> Pada tugas kali ini saya melakukan perubahan pada nama aplikasi, lalu gambar icon aplikasi dan juga pada splashscreen, untuk cara dan isi code nya sama seperti pada tugas 2 hanya menyesuaikan saja dengan yang baru.
+> Pada tugas kali ini saya melakukan perubahan pada nama aplikasi, lalu gambar icon aplikasi dan juga pada splashscreen, untuk cara dan isi code nya sama seperti pada tugas sebelumnya hanya menyesuaikan saja dengan yang baru.
 
 **Fill in All The Code in This Project :**
 > 1. ***Gradle Script*** => `build.gradle.kts (Module :app)`
